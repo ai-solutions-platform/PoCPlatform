@@ -1,0 +1,234 @@
+[
+  {
+    "id": "S001",
+    "title": "Check Engine Light Diagnostic Assessment",
+    "content": "A Check Engine Light can be triggered by multiple systems. Common causes include ignition faults, fuel mixture problems, intake or vacuum leaks, emissions system faults, oxygen sensor issues, catalytic converter efficiency problems, or electrical and sensor faults. The possible causes should be ranked using available DTCs, freeze-frame data, vehicle symptoms, mileage, service history, and live vehicle data. A scan of all diagnostic trouble codes should be the first step before replacing any components.",
+    "video": "",
+    "images": "",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "S002",
+    "title": "DTC P0301 P0171 P0420 Analysis",
+    "content": "P0301 indicates a misfire detected on cylinder 1. Initial checks should include the spark plug, ignition coil, injector, compression, wiring, and possible air leaks affecting that cylinder. P0171 indicates that the engine control module has detected a lean condition, meaning too much air or insufficient fuel. Diagnostic checks should include intake and vacuum leaks, fuel pressure, injectors, mass airflow sensor readings, and fuel trims. P0420 indicates catalytic converter efficiency below threshold on Bank 1. Before replacing the catalytic converter, verify that misfire and fuel mixture faults are resolved because these conditions can cause or contribute to P0420. The recommended diagnostic sequence is to investigate P0301 and P0171 first and then reevaluate P0420.",
+    "video": "",
+    "images": "",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "S003",
+    "title": "Fault Repair Priority",
+    "content": "Faults that can cause additional engine or emissions-system damage should be prioritized. When P0301, P0171, and P0420 occur together, the misfire and lean-condition faults should normally be diagnosed before the catalyst-efficiency fault. An active misfire can send unburned fuel into the exhaust and damage the catalytic converter, while a lean condition can contribute to unstable combustion. After correcting the underlying combustion or air-fuel issue, clear the codes, complete the appropriate drive cycle, and determine whether P0420 returns.",
+    "video": "",
+    "images": "",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "S004",
+    "title": "Required Vehicle Diagnostic Data",
+    "content": "To improve diagnostic confidence, collect the VIN, model, model year, engine and powertrain configuration, mileage, complete DTC list, DTC status, freeze-frame information, engine coolant temperature, engine speed, vehicle speed, short-term and long-term fuel trims, oxygen or air-fuel sensor data, mass airflow data when available, misfire counters, fuel pressure, battery voltage, recent repairs, maintenance history, and a description of the symptoms reported by the customer.",
+    "video": "",
+    "images": "",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "S005",
+    "title": "Root Cause Diagnostic Reasoning",
+    "content": "Root-cause identification should be based on relationships between symptoms, DTCs, vehicle data, and known failure patterns. Correlated faults should first be evaluated for a common cause rather than treated as independent failures. For example, a vacuum leak may create a lean condition and contribute to a misfire. A persistent misfire may subsequently affect catalytic-converter efficiency. Diagnostic evidence should be used to eliminate unlikely causes through targeted tests before a component is replaced.",
+    "video": "",
+    "images": "",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "S006",
+    "title": "Consequences of Delaying Repair",
+    "content": "Continuing to drive approximately 500 km with an unresolved engine fault can increase fuel consumption, emissions, drivability problems, and the possibility of secondary damage. A persistent misfire can overheat or damage the catalytic converter. A severe lean condition can cause poor combustion and increased engine temperatures. The actual risk depends on fault severity and operating conditions. A flashing Check Engine Light or severe drivability symptoms should be treated as an indication to stop driving and inspect the vehicle promptly.",
+    "video": "",
+    "images": "",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "S007",
+    "title": "Diagnosis Confidence Assessment",
+    "content": "Diagnostic confidence should reflect the amount and quality of evidence available. DTCs alone generally provide an initial direction rather than confirmation of a failed component. Confidence increases when DTC information is supported by freeze-frame data, live measurements, physical inspection, service information, and successful component or system tests. A diagnosis should remain provisional until the suspected cause has been verified through appropriate diagnostic procedures.",
+    "video": "",
+    "images": "",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "S008",
+    "title": "Step-by-Step Repair Plan",
+    "content": "Begin by confirming the customer concern and performing a complete vehicle scan. Record all DTCs and freeze-frame information before clearing any data. Consult the applicable service information and diagnostic procedure for the vehicle. Inspect related connectors, wiring, hoses, components, and visible damage. Perform the specified diagnostic tests and isolate the root cause. Repair or replace only the component confirmed to be faulty. Reassemble all removed components according to service procedures and torque specifications. Clear DTCs when appropriate, perform required relearn procedures, complete a verification drive cycle, rescan the vehicle, and confirm that the original condition has been corrected.",
+    "video": "",
+    "images": "",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "S009",
+    "title": "Required Special Tools",
+    "content": "Required tools depend on the confirmed fault and vehicle configuration. Typical diagnostic work may require a compatible diagnostic scan tool, digital multimeter, battery support unit, fuel-pressure test equipment, smoke or EVAP leak tester, compression gauge, leak-down tester, oscilloscope, torque wrench, and vehicle-specific service tools. The applicable GM service procedure should be checked before beginning repair to determine whether any model-specific tools are required.",
+    "video": "",
+    "images": "",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "S010",
+    "title": "Labor Time and Repair Cost Estimate",
+    "content": "Labor time and repair cost depend on the vehicle model, engine configuration, confirmed root cause, required parts, local labor rate, and applicable service operations. Diagnostic time should be separated from repair time. A reliable estimate should be generated only after the VIN, confirmed diagnosis, required parts, published labor operation, and workshop labor rate are available.",
+    "video": "",
+    "images": "",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "S011",
+    "title": "Repair Risk Assessment",
+    "content": "Repair risks can include burns from hot engine or exhaust components, electrical shorts, fuel exposure, pressurized systems, vehicle movement, lifting hazards, damage caused by incorrect torque, connector or wiring damage, contamination of sensitive components, and incorrect replacement of parts before confirming the root cause. Appropriate personal protective equipment, vehicle isolation procedures, service information, and tool instructions should be followed.",
+    "video": "",
+    "images": "",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "S012",
+    "title": "Repair Verification Procedure",
+    "content": "After completing the repair, visually inspect the repaired area and verify that all connectors, hoses, fasteners, and components are correctly installed. Clear DTCs when instructed by the service procedure. Start the vehicle and monitor relevant live data. Confirm that the original symptoms are no longer present. Perform any required relearn or reset procedures, complete an appropriate road test or drive cycle, rescan all modules, and verify that no relevant DTCs have returned.",
+    "video": "",
+    "images": "",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "S013",
+    "title": "Technician Repair Checklist",
+    "content": "Technician checklist: verify VIN and vehicle configuration; confirm customer concern; perform complete DTC scan; save freeze-frame and diagnostic data; review applicable service information; inspect related wiring, connectors, hoses, and components; perform required diagnostic tests; confirm the root cause before replacing parts; obtain correct replacement parts and tools; complete the repair according to specifications; verify torque values and connections; perform required relearns; clear applicable DTCs; road test the vehicle; rescan modules; confirm the concern is resolved; document the repair and diagnostic results.",
+    "video": "",
+    "images": "",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "S014",
+    "title": "VIN Decode and Compatible Parts Identification",
+    "content": "The VIN should be decoded to identify the vehicle make, model, model year, engine, drivetrain, manufacturing information, and other configuration data required for accurate parts identification. Compatible replacement parts should then be selected using the decoded vehicle configuration and the applicable parts catalog. A valid VIN is required before exact compatibility can be confirmed.",
+    "video": "",
+    "images": "",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "S015",
+    "title": "OEM and Aftermarket Part Alternatives",
+    "content": "Replacement options can include the current GM or ACDelco service part and compatible aftermarket alternatives. Each option should be compared using compatibility, quality, warranty, expected service life, availability, price, and supplier reliability. Exact alternatives should only be recommended after the VIN and required part have been identified.",
+    "video": "",
+    "images": "",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "S016",
+    "title": "Best Value Part Selection",
+    "content": "Best value should be determined using more than purchase price. The comparison should include confirmed vehicle compatibility, part quality, expected durability, warranty coverage, supplier reliability, delivery time, labor required for replacement, and the consequences of premature failure. For high-labor or critical components, a higher-quality part may provide better overall value even when its initial price is higher.",
+    "video": "",
+    "images": "",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "S017",
+    "title": "Superseded Part Number Verification",
+    "content": "A part number may be replaced by a newer service part number because of design changes, supplier changes, consolidation, or product updates. Supersession should be verified using the current parts catalog or authorized parts information for the specific VIN. The replacement part number and any associated installation notes should be reviewed before ordering.",
+    "video": "",
+    "images": "",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "S018",
+    "title": "Parts Inventory Availability",
+    "content": "Parts availability requires access to the workshop, dealer, warehouse, or supplier inventory system. The required part number, quantity, location, available stock, reserved quantity, expected replenishment date, and delivery lead time should be checked. Without current inventory-system data, availability cannot be confirmed.",
+    "video": "",
+    "images": "",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "S019",
+    "title": "Alternative Supplier Recommendation",
+    "content": "If the preferred part is unavailable, alternative suppliers should be evaluated using exact part compatibility, manufacturer or brand, availability, delivery time, warranty, price, return policy, and supplier reliability. Superseded OEM part numbers and approved equivalent alternatives should also be checked before selecting a different supplier.",
+    "video": "",
+    "images": "",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "S020",
+    "title": "Earliest Available Repair Scheduling",
+    "content": "The earliest repair appointment should be selected by considering technician availability, required skills, estimated labor time, bay availability, required tools, parts availability, and existing workshop commitments. Current workshop scheduling data is required before an exact appointment can be assigned.",
+    "video": "",
+    "images": "",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "S021",
+    "title": "Technician Skill Matching",
+    "content": "The best technician for a repair should be selected by comparing the skills required for the job with technician qualifications, certifications, diagnostic experience, previous work on similar systems, current workload, availability, and expected repair duration. The technician with the strongest relevant skills is not always the optimal assignment if another qualified technician can complete the work sooner without affecting workshop efficiency.",
+    "video": "",
+    "images": "",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "S022",
+    "title": "Workshop Schedule Optimization",
+    "content": "Workshop scheduling should balance technician skills, job priority, promised completion times, parts availability, bay availability, tool availability, estimated labor time, and dependencies between diagnostic and repair activities. Jobs blocked by unavailable parts should not consume active workshop capacity when other ready-to-start work can be assigned.",
+    "video": "",
+    "images": "",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "S023",
+    "title": "Workshop Bottleneck Prediction",
+    "content": "Potential workshop bottlenecks include overloaded technicians, limited diagnostic equipment, unavailable service bays, delayed parts, jobs requiring specialized skills, underestimated repair duration, and excessive work-in-progress. Bottlenecks can be predicted by comparing scheduled demand with available technician hours, resources, job dependencies, and historical repair durations.",
+    "video": "",
+    "images": "",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "S024",
+    "title": "Workshop Waiting Time Reduction",
+    "content": "Waiting time can be reduced by confirming parts availability before scheduling repairs, performing pre-diagnosis when possible, assigning work according to technician skills, limiting work-in-progress, reserving specialized tools, separating quick-service work from longer repairs, improving communication when jobs are blocked, and continuously updating estimated completion times based on actual workshop progress.",
+    "video": "",
+    "images": "",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "S025",
+    "title": "Repair Order Creation",
+    "content": "A repair order should contain customer and vehicle identification, VIN, mileage, customer concern, diagnostic findings, DTCs when relevant, recommended repair, approved labor operations, required parts, technician assignment, estimated cost, authorization status, and relevant notes. Creation of the repair order requires access to the connected Dealer Management System.",
+    "video": "",
+    "images": "",
+    "category": "Integration"
+  },
+  {
+    "id": "S026",
+    "title": "Inventory Consumption Update",
+    "content": "After parts are installed, inventory should be updated using the repair order, consumed part numbers, quantities, storage locations, technician or transaction identifier, and timestamp. The consumed quantity should be deducted from available inventory and associated with the corresponding repair order. Current inventory-system access is required to perform the update.",
+    "video": "",
+    "images": "",
+    "category": "Integration"
+  },
+  {
+    "id": "S027",
+    "title": "Repair Invoice Generation",
+    "content": "The invoice should include customer and vehicle information, repair-order number, performed labor operations, labor hours and rates, installed parts and quantities, applicable fees, taxes, discounts, subtotal, total amount, and payment information when available. Invoice generation should use the final approved repair-order data to avoid differences between authorized and billed work.",
+    "video": "",
+    "images": "",
+    "category": "Integration"
+  },
+  {
+    "id": "S028",
+    "title": "ERP Inventory Consumption Notification",
+    "content": "The ERP inventory transaction should identify the consumed part number, quantity, inventory location, repair-order reference, transaction date and time, and applicable accounting or cost information. The inventory update should be validated to prevent duplicate consumption transactions. ERP connectivity is required to submit the transaction.",
+    "video": "",
+    "images": "",
+    "category": "Integration"
+  },
+  {
+    "id": "S029",
+    "title": "Customer CRM Follow-Up",
+    "content": "A customer follow-up should reference the customer, vehicle, completed repair, repair-order number, completion date, preferred contact method, and follow-up date. The follow-up can be used to confirm repair satisfaction, identify recurring symptoms, remind the customer of additional recommended work, or collect service feedback. CRM access is required to create the scheduled follow-up.",
+    "video": "",
+    "images": "",
+    "category": "Integration"
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "id": "A001",
+    "title": "Diagnostic assessment available",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "A002",
+    "title": "DTC analysis available",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "A003",
+    "title": "Repair priority identified",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "A004",
+    "title": "Additional vehicle data required",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "A005",
+    "title": "Root cause reasoning available",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "A006",
+    "title": "Issue impact assessment available",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "A007",
+    "title": "Diagnosis confidence estimated",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "A008",
+    "title": "Repair plan available",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "A009",
+    "title": "Required special tools identified",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "A010",
+    "title": "Labor time and repair cost estimated",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "A011",
+    "title": "Repair risks identified",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "A012",
+    "title": "Repair verification procedure available",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "A013",
+    "title": "Technician checklist available",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "A014",
+    "title": "VIN decoded and compatible parts identified",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "A015",
+    "title": "OEM and aftermarket alternatives available",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "A016",
+    "title": "Best value option identified",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "A017",
+    "title": "Part supersession information available",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "A018",
+    "title": "Part availability checked",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "A019",
+    "title": "Alternative suppliers available",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "A020",
+    "title": "Earliest technician availability identified",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "A021",
+    "title": "Best technician match identified",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "A022",
+    "title": "Optimized workshop schedule available",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "A023",
+    "title": "Workshop bottlenecks identified",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "A024",
+    "title": "Waiting time reduction recommendations available",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "A025",
+    "title": "Repair order ready for DMS creation",
+    "category": "Integration"
+  },
+  {
+    "id": "A026",
+    "title": "Inventory update ready",
+    "category": "Integration"
+  },
+  {
+    "id": "A027",
+    "title": "Invoice ready for generation",
+    "category": "Integration"
+  },
+  {
+    "id": "A028",
+    "title": "ERP inventory notification ready",
+    "category": "Integration"
+  },
+  {
+    "id": "A029",
+    "title": "Customer follow-up ready for scheduling",
+    "category": "Integration"
+  }
+]

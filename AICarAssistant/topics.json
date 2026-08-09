@@ -1,0 +1,27 @@
+[
+  {
+    "id": "T001",
+    "title": "Vehicle Diagnostics",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "T002",
+    "title": "Guided Repair",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "T003",
+    "title": "Parts Intelligence",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "T004",
+    "title": "Workshop Operations",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "T005",
+    "title": "Integration",
+    "category": "Integration"
+  }
+]

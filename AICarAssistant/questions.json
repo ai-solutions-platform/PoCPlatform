@@ -1,0 +1,176 @@
+[
+  {
+    "id": "Q001",
+    "title": "Check Engine Light Diagnosis",
+    "content": "My Check Engine Light is ON. Diagnose the possible causes and rank them by probability.",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "Q002",
+    "title": "DTC Interpretation",
+    "content": "Read these DTCs (P0301, P0171, P0420). Explain each code and recommend the next diagnostic steps.",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "Q003",
+    "title": "Fault Repair Priority",
+    "content": "Which fault should be repaired first, and why?",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "Q004",
+    "title": "Additional Diagnostic Data",
+    "content": "What additional vehicle data do you need before confirming the diagnosis?",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "Q005",
+    "title": "Root Cause Reasoning",
+    "content": "Show your reasoning for identifying the most likely root cause.",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "Q006",
+    "title": "Issue Consequences",
+    "content": "What happens if this issue is ignored for another 500 km?",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "Q007",
+    "title": "Diagnosis Confidence",
+    "content": "Estimate the confidence level of your diagnosis.",
+    "category": "Vehicle Diagnostics"
+  },
+  {
+    "id": "Q008",
+    "title": "Repair Plan",
+    "content": "Create a step-by-step repair plan for this fault.",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "Q009",
+    "title": "Special Tools",
+    "content": "Which special tools are required?",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "Q010",
+    "title": "Labor Time and Repair Cost",
+    "content": "Estimate labor time and repair cost.",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "Q011",
+    "title": "Repair Risks",
+    "content": "What risks are involved during this repair?",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "Q012",
+    "title": "Repair Verification",
+    "content": "How can the repair be verified after completion?",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "Q013",
+    "title": "Technician Checklist",
+    "content": "Generate a technician checklist.",
+    "category": "Guided Repair"
+  },
+  {
+    "id": "Q014",
+    "title": "VIN Decode and Compatible Parts",
+    "content": "Decode this VIN and identify compatible replacement parts.",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "Q015",
+    "title": "OEM and Aftermarket Alternatives",
+    "content": "Recommend OEM and aftermarket alternatives.",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "Q016",
+    "title": "Best Value Part",
+    "content": "Which option provides the best value?",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "Q017",
+    "title": "Superseded Part Numbers",
+    "content": "Are there any superseded part numbers?",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "Q018",
+    "title": "Parts Availability",
+    "content": "Check if the required parts are in stock.",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "Q019",
+    "title": "Alternative Suppliers",
+    "content": "Suggest alternative suppliers if unavailable.",
+    "category": "Parts Intelligence"
+  },
+  {
+    "id": "Q020",
+    "title": "Earliest Technician Scheduling",
+    "content": "Schedule this repair for the earliest available technician.",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "Q021",
+    "title": "Best Technician Match",
+    "content": "Which technician has the best skills for this repair?",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "Q022",
+    "title": "Workshop Schedule Optimization",
+    "content": "Optimize today's workshop schedule.",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "Q023",
+    "title": "Workshop Bottleneck Prediction",
+    "content": "Predict workshop bottlenecks.",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "Q024",
+    "title": "Waiting Time Reduction",
+    "content": "Recommend how to reduce waiting time.",
+    "category": "Workshop Operations"
+  },
+  {
+    "id": "Q025",
+    "title": "Create Repair Order",
+    "content": "Create a repair order in the DMS.",
+    "category": "Integration"
+  },
+  {
+    "id": "Q026",
+    "title": "Update Inventory",
+    "content": "Update inventory after parts are used.",
+    "category": "Integration"
+  },
+  {
+    "id": "Q027",
+    "title": "Generate Invoice",
+    "content": "Generate an invoice.",
+    "category": "Integration"
+  },
+  {
+    "id": "Q028",
+    "title": "Notify ERP",
+    "content": "Notify the ERP about the consumed inventory.",
+    "category": "Integration"
+  },
+  {
+    "id": "Q029",
+    "title": "Customer CRM Follow-Up",
+    "content": "Schedule a customer follow-up in the CRM.",
+    "category": "Integration"
+  }
+]

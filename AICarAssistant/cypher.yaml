@@ -1,0 +1,105 @@
+# ============================================
+# Neo4j Configuration
+# ============================================
+
+neo4j:
+  url: "neo4j+s://8e6056eb.databases.neo4j.io"
+  user: "neo4j"
+  password: "Cgx9CwkaPZAXvkZPRKsuaQzmf48a3Uw47XyRexwi0Kw"
+  database: "neo4j"
+
+
+# ============================================
+# Cypher Queries
+# ============================================
+
+queries:
+
+  # ==========================================
+  # Bootstrap
+  # Constraints to keep node IDs unique
+  # ==========================================
+  bootstrap:
+
+    topic_id_constraint: |
+      CREATE CONSTRAINT topic_id_unique IF NOT EXISTS
+      FOR (n:Topic)
+      REQUIRE n.id IS UNIQUE
+
+    question_id_constraint: |
+      CREATE CONSTRAINT question_id_unique IF NOT EXISTS
+      FOR (n:Question)
+      REQUIRE n.id IS UNIQUE
+
+    answer_id_constraint: |
+      CREATE CONSTRAINT answer_id_unique IF NOT EXISTS
+      FOR (n:Answer)
+      REQUIRE n.id IS UNIQUE
+
+    solution_id_constraint: |
+      CREATE CONSTRAINT solution_id_unique IF NOT EXISTS
+      FOR (n:Solution)
+      REQUIRE n.id IS UNIQUE
+
+
+  # ==========================================
+  # Load
+  # ==========================================
+  load:
+
+    # ========================================
+    # Nodes
+    # ========================================
+    nodes:
+
+      Topic: |
+        UNWIND $rows AS row
+        MERGE (n:Topic {id: row.id})
+        SET n.title = row.title,
+            n.category = row.category
+
+      Question: |
+        UNWIND $rows AS row
+        MERGE (n:Question {id: row.id})
+        SET n.title = row.title,
+            n.content = row.content,
+            n.category = row.category
+
+      Answer: |
+        UNWIND $rows AS row
+        MERGE (n:Answer {id: row.id})
+        SET n.title = row.title,
+            n.category = row.category
+
+      Solution: |
+        UNWIND $rows AS row
+        MERGE (n:Solution {id: row.id})
+        SET n.title = row.title,
+            n.content = row.content,
+            n.video = row.video,
+            n.images = row.images,
+            n.category = row.category
+
+
+    # ========================================
+    # Relationships
+    # ========================================
+    relationships:
+
+      HAS_QUESTION: |
+        UNWIND $rows AS row
+        MATCH (source:Topic {id: row.source})
+        MATCH (target:Question {id: row.target})
+        MERGE (source)-[:HAS_QUESTION]->(target)
+
+      HAS_ANSWER: |
+        UNWIND $rows AS row
+        MATCH (source:Question {id: row.source})
+        MATCH (target:Answer {id: row.target})
+        MERGE (source)-[:HAS_ANSWER]->(target)
+
+      ANSWER_HAS_SOLUTION: |
+        UNWIND $rows AS row
+        MATCH (source:Answer {id: row.source})
+        MATCH (target:Solution {id: row.target})
+        MERGE (source)-[:ANSWER_HAS_SOLUTION]->(target)
