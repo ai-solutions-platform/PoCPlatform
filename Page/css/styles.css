@@ -781,3 +781,290 @@ footer{
   margin:0 0 12px;
   font-size:20px;
 }
+
+
+/* =========================================
+   COMPACT BROCHURE EXPERIENCE
+========================================= */
+
+.brochure{
+  padding:clamp(10px,2vw,24px);
+}
+
+.brochure-panel{
+  width:min(1440px,96vw);
+  height:min(860px,92vh);
+  max-height:none;
+  overflow:hidden;
+  border-radius:18px;
+  display:grid;
+  grid-template-rows:7px auto minmax(0,1fr);
+}
+
+.brochure-head{
+  padding:18px 24px 14px;
+  align-items:center;
+}
+
+.brochure-title-wrap{
+  min-width:0;
+}
+
+.brochure-title-wrap h3{
+  margin:3px 0 4px;
+  font-size:clamp(22px,2vw,30px);
+}
+
+.brochure-title-wrap p{
+  font-size:13px;
+  line-height:1.42;
+}
+
+.brochure-actions{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:10px;
+  flex-shrink:0;
+}
+
+.action-btn{
+  min-height:40px;
+  padding:0 15px;
+  border:1px solid transparent;
+  border-radius:8px;
+  font-weight:700;
+  font-size:13px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.action-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.demo-btn{
+  color:#fff;
+  background:var(--bosch-pink);
+}
+
+.platform-btn{
+  color:var(--bosch-blue);
+  background:var(--blue-soft);
+  border-color:rgba(0,123,192,.25);
+}
+
+.brochure-body{
+  min-height:0;
+  overflow:hidden;
+  padding:16px 24px 22px;
+  grid-template-columns:1.05fr 1.35fr .95fr;
+  grid-template-rows:minmax(0,1fr);
+  gap:14px;
+  align-items:stretch;
+}
+
+.brochure-body > .brochure-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:repeat(2,minmax(0,1fr));
+  gap:14px;
+  min-height:0;
+}
+
+.brochure-body > div:nth-child(2){
+  min-height:0;
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:16px;
+  background:#fff;
+}
+
+.brochure-body > .brochure-grid:last-child{
+  margin:0;
+}
+
+.section-box{
+  min-height:0;
+  overflow:hidden;
+  padding:16px;
+  border-radius:12px;
+}
+
+.section-box h4{
+  margin-bottom:7px;
+  font-size:15px;
+}
+
+.section-box p,
+.section-box li{
+  font-size:12px;
+  line-height:1.38;
+}
+
+.section-box ul{
+  margin:0;
+  display:grid;
+  gap:3px;
+}
+
+.process-title{
+  margin:0 0 10px;
+  font-size:18px;
+}
+
+.brochure-body .steps{
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+
+.brochure-body .step{
+  min-height:0;
+  padding:11px;
+  border-radius:10px;
+}
+
+.brochure-body .step span{
+  width:24px;
+  height:24px;
+  margin-bottom:6px;
+}
+
+.brochure-body .step strong{
+  font-size:12px;
+}
+
+.brochure-body .step p{
+  font-size:11px;
+  line-height:1.32;
+}
+
+.video-modal{
+  position:fixed;
+  inset:0;
+  z-index:80;
+  display:none;
+  place-items:center;
+  padding:24px;
+  background:rgba(20,20,24,.78);
+  backdrop-filter:blur(8px);
+}
+
+.video-modal.open{
+  display:grid;
+}
+
+.video-dialog{
+  width:min(1080px,94vw);
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 26px 80px rgba(0,0,0,.35);
+}
+
+.video-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:16px 20px;
+}
+
+.video-head small{
+  color:var(--bosch-pink);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.video-head h3{
+  margin:3px 0 0;
+}
+
+.video-stage{
+  position:relative;
+  aspect-ratio:16/9;
+  background:#10131a;
+  display:grid;
+  place-items:center;
+}
+
+.video-stage video{
+  display:none;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.video-stage video.ready{
+  display:block;
+}
+
+.video-placeholder{
+  color:#fff;
+  text-align:center;
+  padding:30px;
+}
+
+.video-placeholder > span{
+  width:68px;
+  height:68px;
+  margin:0 auto 16px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  padding-left:4px;
+  color:#fff;
+  background:var(--bosch-pink);
+  font-size:25px;
+}
+
+.video-placeholder strong{
+  display:block;
+  font-size:20px;
+}
+
+.video-placeholder p{
+  color:#bbc1cc;
+}
+
+@media(max-width:1100px){
+  .brochure-panel{
+    height:94vh;
+    overflow:auto;
+  }
+
+  .brochure-body{
+    overflow:visible;
+    grid-template-columns:1fr;
+  }
+
+  .brochure-body > .brochure-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+  }
+}
+
+@media(max-width:720px){
+  .brochure-head{
+    align-items:flex-start;
+  }
+
+  .brochure-actions{
+    flex-wrap:wrap;
+  }
+
+  .action-btn{
+    flex:1 1 130px;
+  }
+
+  .brochure-body > .brochure-grid,
+  .brochure-body .steps{
+    grid-template-columns:1fr;
+  }
+}
