@@ -338,79 +338,103 @@
   </div>
 
   <!-- =======================================
-       BROCHURE
+       PRESENTATION BROCHURE
   ======================================== -->
 
-  <div
-    class="brochure"
-    id="brochure"
-    aria-hidden="true"
-  >
-    <div class="brochure-panel">
+  <div class="brochure" id="brochure" aria-hidden="true">
+    <article class="brochure-panel" role="dialog" aria-modal="true" aria-labelledby="brochure-title">
       <div class="brochure-bar"></div>
 
-      <div class="brochure-head">
-        <div class="brochure-title-wrap">
-          <small id="brochure-kicker"></small>
-          <h3 id="brochure-title"></h3>
-          <p id="brochure-summary"></p>
-        </div>
-
-        <button
-          class="close-btn"
-          id="close-brochure"
-          aria-label="Close brochure"
-        >
-          ×
-        </button>
-      </div>
+      <button class="close-btn brochure-close" id="close-brochure" aria-label="Close brochure">×</button>
 
       <div class="brochure-body">
-        <div class="brochure-grid">
-          <div class="section-box soft-pink">
-            <h4>
-              What it does
-            </h4>
-            <p id="what-it-does"></p>
-          </div>
-          <div class="section-box soft-green">
-            <h4>
-              Key capabilities
-            </h4>
-            <ul id="capabilities"></ul>
-          </div>
-        </div>
+        <header class="brochure-hero">
+          <div class="brochure-intro">
+            <small id="brochure-kicker"></small>
+            <h3 id="brochure-title"></h3>
+            <p id="brochure-summary"></p>
 
-        <div>
-          <div class="section-kicker">
-            Process
-          </div>
-          <h4 class="process-title">
-            How it works
-          </h4>
-          <div
-            class="steps"
-            id="how-steps"
-          ></div>
-        </div>
+            <div class="hero-actions">
+              <button class="primary-action" id="open-demo" type="button">
+                <span aria-hidden="true">▶</span> Watch demo
+              </button>
+              <button class="secondary-action" id="open-platform" type="button">
+                <span aria-hidden="true">↗</span> Open platform
+              </button>
+            </div>
 
-        <div class="brochure-grid">
-          <div class="section-box soft-blue">
-            <h4>
-              Example use case
-            </h4>
-            <p id="use-case"></p>
+            <div class="audience-tags" id="built-for"></div>
           </div>
 
-          <div class="section-box">
-            <h4>
-              Built for
-            </h4>
-            <div
-              class="built-for"
-              id="built-for"
-            ></div>
+          <div class="brochure-hero-image">
+            <img id="brochure-image" src="" alt="">
+            <div class="image-glow" aria-hidden="true">AI</div>
           </div>
+        </header>
+
+        <section class="value-row" aria-label="Solution value">
+          <article class="value-card pink-value">
+            <span class="value-icon" aria-hidden="true">💬</span>
+            <div><h4>Ask naturally</h4><p>Get direct answers without searching across manuals.</p></div>
+          </article>
+          <article class="value-card blue-value">
+            <span class="value-icon" aria-hidden="true">◉</span>
+            <div><h4>Connected knowledge</h4><p>Unify manuals, videos and diagrams in one trusted source.</p></div>
+          </article>
+          <article class="value-card green-value">
+            <span class="value-icon" aria-hidden="true">✓</span>
+            <div><h4>Guided resolution</h4><p>Receive contextual procedures, media and recommended next steps.</p></div>
+          </article>
+          <article class="capability-card">
+            <h4>Key capabilities</h4>
+            <div class="capability-grid" id="capabilities"></div>
+          </article>
+        </section>
+
+        <section class="story-row">
+          <article class="process-card">
+            <h4>From documentation to answer</h4>
+            <div class="visual-steps" id="how-steps"></div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-icon" aria-hidden="true">🧑‍🔧</div>
+            <div>
+              <h4>Example in action</h4>
+              <dl>
+                <div><dt>Problem</dt><dd id="example-problem"></dd></div>
+                <div><dt>Response</dt><dd id="example-response"></dd></div>
+                <div><dt>Outcome</dt><dd id="example-outcome"></dd></div>
+              </dl>
+              <div class="outcome-tags">
+                <span>⚡ Faster support</span>
+                <span>♢ Consistent answers</span>
+                <span>◷ Less search time</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <footer class="brochure-note">
+          <span>◉ Watch demo opens an in-modal video lightbox.</span>
+          <span>↗ Open platform launches the live application in a new browser tab.</span>
+        </footer>
+      </div>
+    </article>
+  </div>
+
+  <div class="video-modal" id="video-modal" aria-hidden="true">
+    <div class="video-dialog" role="dialog" aria-modal="true" aria-labelledby="video-title">
+      <div class="video-head">
+        <div><small>PoC demo</small><h3 id="video-title">Project demo</h3></div>
+        <button class="close-btn" id="close-video" aria-label="Close demo video">×</button>
+      </div>
+      <div class="video-stage">
+        <video id="demo-video" controls playsinline></video>
+        <div class="video-placeholder" id="video-placeholder">
+          <span>▶</span>
+          <strong>Demo video ready to connect</strong>
+          <p>Add the video URL in <code>js/script.js</code>.</p>
         </div>
       </div>
     </div>
