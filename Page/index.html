@@ -356,13 +356,23 @@
           <p id="brochure-summary"></p>
         </div>
 
-        <button
-          class="close-btn"
-          id="close-brochure"
-          aria-label="Close brochure"
-        >
-          ×
-        </button>
+        <div class="brochure-actions">
+          <button class="action-btn demo-btn" id="open-demo" type="button">
+            <span aria-hidden="true">▶</span>
+            Open demo
+          </button>
+          <button class="action-btn platform-btn" id="open-platform" type="button">
+            <span aria-hidden="true">↗</span>
+            Open platform
+          </button>
+          <button
+            class="close-btn"
+            id="close-brochure"
+            aria-label="Close brochure"
+          >
+            ×
+          </button>
+        </div>
       </div>
 
       <div class="brochure-body">
@@ -411,6 +421,26 @@
               id="built-for"
             ></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-modal" id="video-modal" aria-hidden="true">
+    <div class="video-dialog" role="dialog" aria-modal="true" aria-labelledby="video-title">
+      <div class="video-head">
+        <div>
+          <small>PoC demo</small>
+          <h3 id="video-title">Project demo</h3>
+        </div>
+        <button class="close-btn" id="close-video" aria-label="Close demo video">×</button>
+      </div>
+      <div class="video-stage">
+        <video id="demo-video" controls playsinline></video>
+        <div class="video-placeholder" id="video-placeholder">
+          <span>▶</span>
+          <strong>Demo video ready to connect</strong>
+          <p>Add the project video URL in <code>js/script.js</code>.</p>
         </div>
       </div>
     </div>
