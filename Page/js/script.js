@@ -366,7 +366,20 @@ const brochure =
 const closeBtn =
   document.getElementById("close-brochure");
 
+const projectLinks = {
+  car: { demo: "", platform: "" },
+  genxr: { demo: "", platform: "" },
+  audio: { demo: "", platform: "" },
+  charlie: { demo: "", platform: "" },
+  training: { demo: "", platform: "" },
+  nfc: { demo: "", platform: "" }
+};
+
+let currentProjectKey = null;
+
 function openProject(key){
+
+  currentProjectKey = key;
 
   const p =
     projects[key];
@@ -550,3 +563,70 @@ document.addEventListener(
     }
   }
 );
+
+
+/* ========================================
+   DEMO & PLATFORM ACTIONS
+========================================= */
+
+const demoButton = document.getElementById("open-demo");
+const platformButton = document.getElementById("open-platform");
+const videoModal = document.getElementById("video-modal");
+const closeVideoButton = document.getElementById("close-video");
+const demoVideo = document.getElementById("demo-video");
+const videoPlaceholder = document.getElementById("video-placeholder");
+const videoTitle = document.getElementById("video-title");
+
+function closeVideo(){
+  demoVideo.pause();
+  demoVideo.removeAttribute("src");
+  demoVideo.load();
+  demoVideo.classList.remove("ready");
+  videoPlaceholder.hidden = false;
+  videoModal.classList.remove("open");
+  videoModal.setAttribute("aria-hidden", "true");
+}
+
+demoButton.addEventListener("click", () => {
+  const project = projects[currentProjectKey];
+  const link = projectLinks[currentProjectKey]?.demo;
+
+  videoTitle.textContent = project ? `${project.title} demo` : "Project demo";
+  videoModal.classList.add("open");
+  videoModal.setAttribute("aria-hidden", "false");
+
+  if(link){
+    demoVideo.src = link;
+    demoVideo.classList.add("ready");
+    videoPlaceholder.hidden = true;
+    demoVideo.play().catch(() => {});
+  }else{
+    demoVideo.classList.remove("ready");
+    videoPlaceholder.hidden = false;
+  }
+});
+
+platformButton.addEventListener("click", () => {
+  const link = projectLinks[currentProjectKey]?.platform;
+
+  if(link){
+    window.open(link, "_blank", "noopener,noreferrer");
+    return;
+  }
+
+  window.alert("The platform URL for this PoC has not been connected yet.");
+});
+
+closeVideoButton.addEventListener("click", closeVideo);
+
+videoModal.addEventListener("click", event => {
+  if(event.target === videoModal){
+    closeVideo();
+  }
+});
+
+document.addEventListener("keydown", event => {
+  if(event.key === "Escape" && videoModal.classList.contains("open")){
+    closeVideo();
+  }
+});
