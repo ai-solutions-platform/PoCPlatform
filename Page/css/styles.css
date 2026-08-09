@@ -1305,3 +1305,269 @@ body.modal-open{overflow:hidden}
   .outcome-tags{flex-wrap:wrap}
   .brochure-note{flex-direction:column;gap:5px}
 }
+
+
+/* =========================================
+   BROCHURE LAYOUT REFINEMENT
+   Keeps the hero inside its row and reduces
+   visual weight from placeholder icons.
+========================================= */
+
+.brochure-body{
+  padding:28px 32px 18px;
+  grid-template-rows:
+    minmax(250px,1.18fr)
+    minmax(116px,.58fr)
+    minmax(174px,.82fr)
+    20px;
+  gap:14px;
+}
+
+.brochure-hero{
+  height:100%;
+  min-height:0;
+  overflow:hidden;
+  grid-template-columns:.9fr 1.1fr;
+  gap:28px;
+}
+
+.brochure-intro{
+  height:100%;
+  min-height:0;
+  padding:4px 0 0 4px;
+  justify-content:flex-start;
+}
+
+.brochure-intro h3{
+  margin:8px 0 9px;
+  font-size:clamp(32px,3vw,50px);
+}
+
+.brochure-intro > p{
+  font-size:clamp(14px,1.15vw,18px);
+  line-height:1.42;
+}
+
+.hero-actions{
+  margin-top:16px;
+  gap:10px;
+}
+
+.primary-action,
+.secondary-action{
+  min-width:176px;
+  height:46px;
+  padding:0 20px;
+  font-size:14px;
+}
+
+.audience-tags{
+  margin-top:12px;
+  gap:7px;
+}
+
+.audience-tags span{
+  min-height:31px;
+  padding:5px 10px;
+  font-size:10px;
+}
+
+.audience-tags span::before{
+  font-size:14px;
+}
+
+.brochure-hero-image{
+  position:relative;
+  width:100%;
+  height:100%;
+  min-height:0;
+  max-height:100%;
+  align-self:stretch;
+  overflow:hidden;
+  contain:layout paint;
+}
+
+.brochure-hero-image img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  max-height:100%;
+  object-fit:cover;
+}
+
+.image-glow{
+  width:54px;
+  height:54px;
+  font-size:18px;
+  box-shadow:0 0 0 7px rgba(185,2,118,.16),0 0 26px rgba(185,2,118,.4);
+}
+
+.value-row{
+  height:100%;
+  min-height:0;
+  grid-template-columns:1fr 1fr 1fr 1.28fr;
+  gap:11px;
+}
+
+.value-card{
+  min-height:0;
+  padding:12px;
+  grid-template-columns:42px 1fr;
+  gap:10px;
+}
+
+.value-icon{
+  width:40px;
+  height:40px;
+  border-radius:11px;
+  font-size:18px;
+}
+
+.value-card h4,
+.capability-card h4,
+.process-card h4,
+.example-card h4{
+  margin-bottom:4px;
+  font-size:13px;
+}
+
+.value-card p{
+  font-size:10px;
+  line-height:1.35;
+}
+
+.capability-card{
+  min-height:0;
+  padding:10px 12px;
+}
+
+.capability-grid{
+  gap:6px;
+}
+
+.capability-item{
+  padding:6px 3px;
+}
+
+.capability-item span{
+  width:22px;
+  height:22px;
+  margin-bottom:3px;
+  font-size:14px;
+}
+
+.capability-item p{
+  font-size:8px;
+  line-height:1.15;
+}
+
+.story-row{
+  height:100%;
+  min-height:0;
+  gap:14px;
+}
+
+.process-card{
+  min-height:0;
+  padding:14px 18px;
+}
+
+.visual-steps{
+  min-height:0;
+  gap:14px;
+}
+
+.visual-step:not(:last-child)::after{
+  top:31px;
+  right:-15px;
+  font-size:19px;
+}
+
+.visual-step-number{
+  width:20px;
+  height:20px;
+  margin-bottom:5px;
+  font-size:9px;
+}
+
+.visual-step-icon{
+  width:48px;
+  height:48px;
+  margin-bottom:7px;
+  font-size:18px;
+}
+
+.visual-step strong{
+  font-size:9px;
+  line-height:1.2;
+}
+
+.example-card{
+  min-height:0;
+  padding:14px;
+  grid-template-columns:84px 1fr;
+  gap:14px;
+}
+
+.example-icon{
+  width:76px;
+  height:76px;
+  font-size:30px;
+}
+
+.example-card dl{
+  gap:5px;
+}
+
+.example-card dl > div{
+  grid-template-columns:72px 1fr;
+  gap:7px;
+}
+
+.example-card dt,
+.example-card dd{
+  font-size:9px;
+}
+
+.outcome-tags{
+  margin-top:8px;
+  gap:6px;
+}
+
+.outcome-tags span{
+  padding:5px 6px;
+  font-size:8px;
+}
+
+.brochure-note{
+  align-items:center;
+  gap:28px;
+  font-size:9px;
+}
+
+@media(max-width:1180px){
+  .brochure-body{
+    grid-template-rows:auto;
+  }
+
+  .brochure-hero{
+    height:auto;
+    overflow:visible;
+  }
+
+  .brochure-hero-image{
+    height:320px;
+    max-height:none;
+  }
+}
+
+@media(max-width:720px){
+  .brochure-body{
+    padding:58px 14px 16px;
+  }
+
+  .brochure-hero-image{
+    height:240px;
+  }
+}
