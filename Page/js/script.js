@@ -19,12 +19,10 @@ const projects = {
       "Transforms technical product information into an accessible conversational support experience. Instead of manually searching through multiple manuals or documents, users can ask direct questions and retrieve relevant guidance, explanations, procedures and supporting media.",
 
     capabilities: [
-      "Natural-language technical questions",
-      "Multisource product knowledge",
-      "Contextual retrieval from structured information",
-      "Step-by-step procedures",
-      "Images, diagrams and video references",
-      "Support for diagnostics, repair and product knowledge"
+      "Natural-language Q&A",
+      "Multisource knowledge",
+      "Diagrams & videos",
+      "Step-by-step procedures"
     ],
 
     how: [
@@ -47,7 +45,7 @@ const projects = {
     ],
 
     useCase:
-      "A technician asks why the Check Engine Light is ON. The assistant retrieves the relevant diagnostic information, explains possible causes, recommends the next diagnostic steps and can return supporting procedures, diagrams or videos.",
+      "The assistant retrieves the relevant diagnostic information, explains possible causes, recommends the next diagnostic steps and can return supporting procedures, diagrams or videos.",
 
     builtFor: [
       "Automotive",
@@ -358,7 +356,7 @@ const projects = {
 
 const projectMedia = {
   car: {
-    image: "images/poc-car-assist.png",
+    image: "images/hero-car-assist.png",
     imageAlt: "Agentic AI Car Assist in an automotive workshop",
     demo: "",
     platform: ""
@@ -406,8 +404,23 @@ const demoVideo = document.getElementById("demo-video");
 const videoPlaceholder = document.getElementById("video-placeholder");
 const videoTitle = document.getElementById("video-title");
 
-const stepIcons = ["☁", "▥", "💬", "▧"];
-const capabilityIcons = ["💬", "◉", "☷", "▣"];
+const stepIcons = [
+  "images/icon-step-sources-ca.png",
+  "images/icon-step-know-ca.png",
+  "images/icon-step-ask-ca.png",
+  "images/icon-step-guidance-ca.png"
+];
+const capabilityIcons = [
+  "images/icon-keycap-nat-ca.png",
+  "images/icon-keycap-know-ca.png",
+  "images/icon-keycap-videos-ca.png",
+  "images/icon-keycap-steps-ca.png"
+];
+const audienceIcons = [
+  "images/icon-up-automotive-ca.png",
+  "images/icon-up-technical-ca.png",
+  "images/icon-up-service-ca.png"
+];
 let currentProjectKey = null;
 
 function openProject(key){
@@ -427,9 +440,9 @@ function openProject(key){
 
   const builtFor = document.getElementById("built-for");
   builtFor.innerHTML = "";
-  project.builtFor.slice(0, 3).forEach(item => {
+  project.builtFor.slice(0, 3).forEach((item, index) => {
     const tag = document.createElement("span");
-    tag.textContent = item;
+    tag.innerHTML = `<img src="${audienceIcons[index]}" alt=""> ${item}`;
     builtFor.appendChild(tag);
   });
 
@@ -439,7 +452,7 @@ function openProject(key){
     const capability = document.createElement("div");
     capability.className = "capability-item";
     capability.innerHTML = `
-      <span aria-hidden="true">${capabilityIcons[index]}</span>
+      <span aria-hidden="true"><img src="${capabilityIcons[index]}" alt=""></span>
       <p>${item}</p>
     `;
     capabilities.appendChild(capability);
@@ -452,7 +465,7 @@ function openProject(key){
     step.className = "visual-step";
     step.innerHTML = `
       <span class="visual-step-number">${index + 1}</span>
-      <span class="visual-step-icon" aria-hidden="true">${stepIcons[index]}</span>
+      <span class="visual-step-icon" aria-hidden="true"><img src="${stepIcons[index]}" alt=""></span>
       <strong>${item[0]}</strong>
     `;
     steps.appendChild(step);
