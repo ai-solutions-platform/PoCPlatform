@@ -160,13 +160,13 @@ const projects = {
   },
 
   /* =====================================
-     TPA CHARLIE
+     TPA CHARLIE - T-VAG
   ===================================== */
 
   charlie: {
     kicker: "Troubleshooting Assistant",
 
-    title: "TPA Charlie",
+    title: "T-VAG",
 
     summary:
       "AI-powered virtual assistant for guided troubleshooting and maintenance support. It helps resolve issues step by step, capture evidence with images, use voice commands and generate reports automatically.",
