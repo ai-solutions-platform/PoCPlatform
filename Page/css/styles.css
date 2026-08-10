@@ -2240,3 +2240,231 @@ body.modal-open{overflow:hidden}
     text-align:left;
   }
 }
+
+
+/* =========================================
+   WIDE BUT SHORT SCREENS
+   Preserve the desktop composition without
+   vertically squeezing or clipping sections.
+========================================= */
+
+@media (min-width: 901px) and (max-height: 850px){
+  .brochure{
+    padding:6px;
+  }
+
+  .brochure-panel{
+    width:min(1840px,99vw);
+    height:calc(100dvh - 12px);
+    max-height:calc(100dvh - 12px);
+    border-radius:18px;
+  }
+
+  .brochure-body{
+    height:100%;
+    min-height:0;
+    padding:22px 38px 12px;
+    grid-template-rows:
+      minmax(0,1.65fr)
+      minmax(118px,.62fr)
+      minmax(185px,.88fr)
+      18px;
+    gap:10px;
+  }
+
+  .brochure-body > *,
+  .brochure-hero,
+  .value-row,
+  .story-row,
+  .process-card,
+  .example-card{
+    min-height:0;
+  }
+
+  .brochure-hero{
+    height:100%;
+    overflow:hidden;
+    gap:24px;
+  }
+
+  .brochure-intro{
+    justify-content:flex-start;
+    overflow:hidden;
+  }
+
+  .brochure-intro > small{
+    font-size:12px;
+  }
+
+  .brochure-intro h3{
+    margin:6px 0 8px;
+    font-size:clamp(36px,3.2vw,52px);
+  }
+
+  .brochure-intro > p{
+    font-size:clamp(13px,1.1vw,17px);
+    line-height:1.4;
+  }
+
+  .hero-actions{
+    margin-top:12px;
+  }
+
+  .primary-action,
+  .secondary-action{
+    height:44px;
+  }
+
+  .audience-tags{
+    margin-top:9px;
+  }
+
+  .audience-tags span{
+    min-height:30px;
+    padding:4px 9px;
+  }
+
+  .brochure-hero-image{
+    height:100%;
+    min-height:0;
+    aspect-ratio:auto;
+  }
+
+  .value-card{
+    padding:12px 14px;
+    grid-template-columns:52px minmax(0,1fr);
+    gap:11px;
+  }
+
+  .value-icon{
+    width:52px;
+    height:52px;
+    padding:10px;
+  }
+
+  .value-card h4{
+    margin-bottom:4px;
+    font-size:16px;
+  }
+
+  .value-card p{
+    font-size:12px;
+  }
+
+  .capability-card{
+    padding:9px 12px;
+    overflow:hidden;
+  }
+
+  .capability-card h4{
+    margin-bottom:8px;
+    font-size:17px;
+  }
+
+  .capability-item{
+    padding:7px 4px;
+  }
+
+  .capability-item span{
+    width:28px;
+    height:28px;
+    margin-bottom:4px;
+  }
+
+  .capability-item p{
+    font-size:9px;
+  }
+
+  .process-card{
+    padding:12px 18px;
+    overflow:hidden;
+  }
+
+  .process-card h4{
+    font-size:17px;
+  }
+
+  .visual-steps{
+    height:calc(100% - 25px);
+    min-height:0;
+    margin:0;
+  }
+
+  .visual-step-number{
+    width:19px;
+    height:19px;
+    margin-bottom:3px;
+  }
+
+  .visual-step-icon{
+    width:54px;
+    height:54px;
+    margin-bottom:5px;
+  }
+
+  .visual-step:not(:last-child)::after{
+    top:27px;
+  }
+
+  .visual-step strong{
+    font-size:10px;
+  }
+
+  .example-card{
+    padding:11px 16px;
+    grid-template-columns:96px minmax(0,1fr);
+    gap:16px;
+    overflow:hidden;
+  }
+
+  .example-icon{
+    width:90px;
+    height:90px;
+  }
+
+  .example-card h4{
+    font-size:16px;
+  }
+
+  .example-card dl{
+    gap:3px;
+  }
+
+  .example-card dl > div{
+    grid-template-columns:78px minmax(0,1fr);
+  }
+
+  .example-card dt,
+  .example-card dd{
+    font-size:10px;
+    line-height:1.25;
+  }
+
+  .outcome-tags{
+    margin-top:6px;
+  }
+
+  .outcome-tags span{
+    padding:5px 8px;
+    font-size:9px;
+  }
+
+  .brochure-note{
+    font-size:8px;
+  }
+}
+
+/* Extra-short desktop windows: allow vertical scrolling
+   instead of crushing the brochure content. */
+@media (min-width: 901px) and (max-height: 680px){
+  .brochure-panel{
+    height:auto;
+    max-height:98dvh;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .brochure-body{
+    min-height:720px;
+  }
+}
