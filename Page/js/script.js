@@ -330,7 +330,7 @@ const projectMedia = {
     image: "images/hero-car-assist.png",
     imageAlt: "Agentic AI Car Assist in an automotive workshop",
     demo: "videos/car-demo.mp4",
-    platform: "https://bgsw-ai-portfolio.netlify.app/",
+    platform: "https://bgsw-agentic-ai-car-assist.netlify.app/",
   },
   genxr: {
     image: "images/poc-gen-xr.png",
