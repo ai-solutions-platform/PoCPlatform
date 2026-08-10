@@ -7,7 +7,7 @@ const projects = {
 
   car: {
     kicker:
-      "PoC 01 · Knowledge & Product Support",
+      "Knowledge & Product Support",
 
     title:
       "Agentic AI Car Assist",
@@ -63,7 +63,7 @@ const projects = {
 
   genxr: {
     kicker:
-      "PoC 02 · Immersive Training",
+      "Immersive Training",
 
     title:
       "GEN XR",
@@ -121,7 +121,7 @@ const projects = {
   audio: {
 
     kicker:
-      "PoC 03 · Predictive Monitoring",
+      "Predictive Monitoring",
 
     title:
       "Audio AI Detection",
@@ -180,7 +180,7 @@ const projects = {
   charlie: {
 
     kicker:
-      "PoC 04 · Troubleshooting Assistant",
+      "Troubleshooting Assistant",
 
     title:
       "TPA Charlie",
@@ -239,7 +239,7 @@ const projects = {
   training: {
 
     kicker:
-      "PoC 05 · Workforce Qualification",
+      "Workforce Qualification",
 
     title:
       "Training & Qualification Platform",
@@ -300,7 +300,7 @@ const projects = {
   nfc: {
 
     kicker:
-      "PoC 06 · Warehouse Intelligence",
+      "Warehouse Intelligence",
 
     title:
       "Smart Warehouse Identification",
@@ -430,6 +430,8 @@ function openProject(key){
   if(!project || !media) return;
 
   currentProjectKey = key;
+
+  brochure.classList.toggle("theme-purple", key === "genxr");
 
   document.getElementById("brochure-kicker").textContent = project.kicker;
   document.getElementById("brochure-title").textContent = project.title;

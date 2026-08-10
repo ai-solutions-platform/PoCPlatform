@@ -410,6 +410,11 @@ h2{
     0 16px 35px rgba(0, 0, 0, 0.13);
 }
 
+/* GEN XR card uses the purple accent */
+.project-card[data-project="genxr"] {
+  --bosch-pink: #6a1b9a;
+}
+
 /* Imagen superior */
 .project-image-wrapper {
   width: 100%;
@@ -2467,4 +2472,53 @@ body.modal-open{overflow:hidden}
   .brochure-body{
     min-height:720px;
   }
+}
+
+
+/* =========================================
+   GEN XR — PURPLE THEME
+   Swaps every pink accent for purple when the
+   brochure is opened for the GEN XR project.
+========================================= */
+
+.brochure.theme-purple{
+  --bosch-pink:#6a1b9a;
+  --pink-soft:#f3ecfa;
+}
+
+.brochure.theme-purple .primary-action{
+  background:linear-gradient(135deg,#50237f,#8324c9);
+  box-shadow:0 10px 24px rgba(106,27,154,.2);
+}
+
+.brochure.theme-purple .pink-value .value-icon{
+  background:#f3ecfa;
+  border-color:#d9c2ef;
+}
+
+.brochure.theme-purple .example-card{
+  background:linear-gradient(135deg,#fff 20%,#f6f0fc);
+  border-color:#ddc9ef;
+}
+
+.brochure.theme-purple .example-icon{
+  border-color:#d9c2ef;
+}
+
+.brochure.theme-purple .outcome-tags span{
+  border-color:#ddc9ef;
+}
+
+.brochure.theme-purple .image-glow{
+  background:rgba(106,27,154,.88);
+  box-shadow:0 0 0 10px rgba(106,27,154,.18),0 0 38px rgba(106,27,154,.48);
+}
+
+/* Tint the pink line-art icons toward purple (excludes the hero photo) */
+.brochure.theme-purple .pink-value .value-icon img,
+.brochure.theme-purple .visual-step-icon img,
+.brochure.theme-purple .example-icon img,
+.brochure.theme-purple .audience-tags span img,
+.brochure.theme-purple .outcome-tags span img{
+  filter:hue-rotate(-45deg) saturate(1.05);
 }
