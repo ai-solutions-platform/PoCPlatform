@@ -11,6 +11,25 @@ const projects = {
     summary:
       "AI-powered knowledge assistant trained with manuals, videos and technical documentation. Users can ask questions in natural language and receive fast, contextual answers from structured product knowledge.",
 
+    value: [
+      [
+        "Ask naturally",
+        "Get direct answers without searching across manuals.",
+      ],
+      [
+        "Connected knowledge",
+        "Unify manuals, videos and diagrams in one trusted source.",
+      ],
+      [
+        "Guided resolution",
+        "Receive contextual procedures, media and recommended next steps.",
+      ],
+    ],
+
+    flowTitle: "From documentation to answer",
+
+    outcomes: ["Faster support", "Consistent answers", "Less search time"],
+
     what: "Transforms technical product information into an accessible conversational support experience. Instead of manually searching through multiple manuals or documents, users can ask direct questions and retrieve relevant guidance, explanations, procedures and supporting media.",
 
     capabilities: [
@@ -63,32 +82,49 @@ const projects = {
     summary:
       "Immersive VR system for training visualization and guided processes. Users can experience procedures in 3D, practice in realistic virtual environments and improve efficiency through interactive simulations.",
 
+    value: [
+      [
+        "Learn by doing",
+        "Practice realistic procedures in an interactive virtual environment.",
+      ],
+      [
+        "Guided in 3D",
+        "Follow step-by-step procedures with clear visual guidance.",
+      ],
+      [
+        "Safe to practice",
+        "Repeat scenarios and make mistakes without any real-world risk.",
+      ],
+    ],
+
+    flowTitle: "From procedure to practice",
+
+    outcomes: ["Faster onboarding", "Measurable skills", "Safer practice"],
+
     what: "Creates safe, repeatable and immersive training environments where users can learn processes through direct interaction. Real equipment, plant areas or procedures can be represented virtually so employees can practice before performing the task in the physical environment.",
 
     capabilities: [
-      "Interactive 3D process visualization",
-      "Immersive VR training environments",
-      "Guided step-by-step procedures",
-      "Realistic equipment interaction",
-      "Difficulty levels and repeatable scenarios",
-      "Training performance tracking",
+      "Immersive VR modules",
+      "Interactive digital twins",
+      "Step validation and guidance",
+      "Performance tracking"
     ],
 
     how: [
       [
-        "Model the environment",
+        "Build scenario",
         "Equipment, workstations and process elements are recreated in a 3D environment.",
       ],
       [
-        "Define the training flow",
-        "Steps, interactions, rules and expected actions are configured.",
+        "Enter simulation",
+        "The user steps into an immersive VR environment configured with the training flow.",
       ],
       [
-        "Train in VR",
-        "The user practices the task in an immersive and controlled environment.",
+        "Practice the task",
+        "The user performs the procedure hands-on, guided step by step in a safe space.",
       ],
       [
-        "Evaluate performance",
+        "Track results",
         "Completion time, errors and user performance can be reviewed after the simulation.",
       ],
     ],
@@ -97,11 +133,9 @@ const projects = {
       "A new plant operator practices assembling or configuring a system in VR before accessing the real workstation. The simulation guides the user through the process, detects incorrect steps and allows repetition without affecting production.",
 
     builtFor: [
-      "Manufacturing",
-      "Plant Training",
-      "Maintenance",
-      "Safety Training",
-      "Technical Education",
+      "Industrial Training",
+      "Plant Operations",
+      "Technical Education"
     ],
   },
 
@@ -218,54 +252,76 @@ const projects = {
   ===================================== */
 
   training: {
-    kicker: "Workforce Qualification",
+    kicker: "Learning & Workforce Development",
 
     title: "Training & Qualification Platform",
 
     summary:
-      "Integrated training and evaluation platform for theoretical and practical plant assessments, combining learning support, open and closed questions, practical evaluation and VR-based simulation.",
+      "Connect learning, practical assessment and qualification in one measurable training journey.",
+
+    value: [
+      [
+        "One learning journey",
+        "Combine theory, guided practice and assessment in one platform.",
+      ],
+      [
+        "Objective evaluation",
+        "Measure knowledge, practical execution and competency evidence.",
+      ],
+      [
+        "Qualification visibility",
+        "Track readiness, progress and certifications across the workforce.",
+      ],
+    ],
+
+    flowTitle: "From learning to qualification",
+
+    outcomes: ["Consistent training", "Visible progress", "Verified skills"],
+
+    example: {
+      labels: ["Need", "Journey", "Result"],
+      values: [
+        "A technician must qualify for a new maintenance procedure.",
+        "The platform combines theory, guided practice and a scored practical assessment.",
+        "Managers see competency evidence and readiness in one dashboard.",
+      ],
+    },
 
     what: "Supports the complete qualification cycle of plant personnel: learning, theoretical evaluation, practical assessment and skills visibility. The platform can incorporate Kirkpatrick-style evaluation principles to measure learning effectiveness and provide a broader view of workforce capability.",
 
     capabilities: [
-      "Theoretical exams",
-      "Open and closed question formats",
-      "Practical evaluations",
-      "VR-based practice and simulations",
-      "Difficulty levels",
-      "Learning progress support",
-      "Workforce skill-level visibility",
-      "Qualification and performance history",
+      "Learning paths",
+      "Theory assessments",
+      "VR & practical training",
+      "Skills dashboards",
     ],
 
     how: [
       [
-        "Assign learning content",
-        "Users receive the material or process knowledge required for their role.",
+        "Assign a path",
+        "A tailored learning path is assigned based on the target role or qualification.",
       ],
       [
-        "Evaluate theory",
-        "The platform delivers open and closed questions to assess understanding.",
+        "Learn the theory",
+        "The user completes theory modules with assessments to build foundational knowledge.",
       ],
       [
-        "Evaluate practice",
-        "Practical tasks can be assessed physically or through VR simulations.",
+        "Practice & assess",
+        "Guided practical exercises and scored assessments validate hands-on execution.",
       ],
       [
-        "Analyze workforce level",
-        "Results provide visibility into individual and team qualification levels.",
+        "Qualify skills",
+        "Verified competencies and certifications are recorded once requirements are met.",
       ],
     ],
 
     useCase:
-      "A production operator completes the theoretical evaluation for a new process, then enters a VR simulation to perform the practical sequence. The platform records both results and shows whether the operator is ready for qualification or needs additional practice.",
+      "The platform combines theory, guided practice and a scored practical assessment.",
 
     builtFor: [
-      "Manufacturing Plants",
       "Workforce Development",
-      "Technical Training",
-      "Qualification Programs",
-      "VR Training",
+      "Plant Training",
+      "Skills Management",
     ],
   },
 
@@ -323,6 +379,106 @@ const projects = {
       "Stock Operations",
     ],
   },
+
+  /* =====================================
+     BCI — HARLEY-DAVIDSON
+  ===================================== */
+
+  bci: {
+    kicker: "Motorcycle Diagnostics & Calibration",
+
+    title: "BCI – Harley-Davidson",
+
+    summary:
+      "Diagnostic interface for Harley-Davidson motorcycles that enables calibrations, maintenance routines and fault diagnostics directly from the vehicle.",
+
+    what: "Connects directly to the motorcycle's electronic systems to read data, run calibrations and support maintenance. Technicians can diagnose faults, adjust vehicle parameters and follow guided service procedures without relying on scattered manual references.",
+
+    capabilities: [
+      "Motorcycle fault diagnostics",
+      "ECU calibration and adjustments",
+      "Guided maintenance routines",
+      "Live vehicle data reading",
+    ],
+
+    how: [
+      [
+        "Connect to the motorcycle",
+        "The BCI links to the vehicle's diagnostic port to establish communication.",
+      ],
+      [
+        "Read vehicle data",
+        "Fault codes, sensor values and system status are retrieved from the motorcycle.",
+      ],
+      [
+        "Calibrate and adjust",
+        "The technician runs calibrations and parameter adjustments as required.",
+      ],
+      [
+        "Guide maintenance",
+        "The tool presents the recommended service steps and confirms the results.",
+      ],
+    ],
+
+    useCase:
+      "A technician connects the BCI to a Harley-Davidson motorcycle, reads active fault codes, runs the required calibration and follows the guided maintenance sequence until the issue is resolved.",
+
+    builtFor: [
+      "Motorcycle Service",
+      "Diagnostics",
+      "Maintenance Workshops",
+    ],
+  },
+
+  /* =====================================
+     VCI — VEHICLE COMMUNICATION INTERFACE
+  ===================================== */
+
+  vci: {
+    kicker: "Vehicle Diagnostics & Calibration",
+
+    title: "VCI – Vehicle Communication Interface",
+
+    summary:
+      "Vehicle Communication Interface with a dedicated Handset that enables calibrations, maintenance and diagnostics for cars.",
+
+    what: "Connects to a car's electronic systems through the VCI and its Handset to read data, run calibrations and support maintenance. Technicians can diagnose faults, adjust vehicle parameters and follow guided service procedures directly at the vehicle.",
+
+    capabilities: [
+      "Vehicle fault diagnostics",
+      "ECU calibration and adjustments",
+      "Guided maintenance routines",
+      "Handset-based on-vehicle control",
+    ],
+
+    how: [
+      [
+        "Connect the VCI",
+        "The VCI links to the car's diagnostic port and pairs with the Handset.",
+      ],
+      [
+        "Read vehicle data",
+        "Fault codes, sensor values and system status are retrieved from the car.",
+      ],
+      [
+        "Calibrate and adjust",
+        "The technician runs calibrations and parameter adjustments from the Handset.",
+      ],
+      [
+        "Guide maintenance",
+        "The tool presents the recommended service steps and confirms the results.",
+      ],
+    ],
+
+    useCase:
+      "A technician connects the VCI to a car, uses the Handset to read active fault codes, runs the required calibration and follows the guided maintenance sequence until the issue is resolved.",
+
+    builtFor: [
+      "Automotive Service",
+      "Diagnostics",
+      "Maintenance Workshops",
+    ],
+  },
 };
 
 const projectMedia = {
@@ -333,7 +489,7 @@ const projectMedia = {
     platform: "https://bgsw-agentic-ai-car-assist.netlify.app/",
   },
   genxr: {
-    image: "images/poc-gen-xr.png",
+    image: "images/hero-genxr.png",
     imageAlt: "GEN XR immersive training",
     demo: "",
     platform: "",
@@ -351,7 +507,7 @@ const projectMedia = {
     platform: "",
   },
   training: {
-    image: "images/poc-training.png",
+    image: "images/hero-training.png",
     imageAlt: "Training and Qualification Platform",
     demo: "",
     platform: "",
@@ -359,6 +515,18 @@ const projectMedia = {
   nfc: {
     image: "images/poc-warehouse.png",
     imageAlt: "Smart Warehouse Identification",
+    demo: "",
+    platform: "",
+  },
+  bci: {
+    image: "images/hero-BCI.png",
+    imageAlt: "BCI diagnostic interface for Harley-Davidson motorcycles",
+    demo: "",
+    platform: "",
+  },
+  vci: {
+    image: "images/hero-VCI.png",
+    imageAlt: "VCI Vehicle Communication Interface with Handset",
     demo: "",
     platform: "",
   },
@@ -392,6 +560,87 @@ const audienceIcons = [
   "images/icon-up-technical-ca.png",
   "images/icon-up-service-ca.png",
 ];
+
+/* Per-project icon sets. Sections without a project-specific set
+   fall back to the AI Car Assist icons. */
+const iconSets = {
+  car: {
+    value: [
+      "images/icon-br-ask-ca.png",
+      "images/icon-br-know-ca.png",
+      "images/icon-br-guided-ca.png",
+    ],
+    capability: capabilityIcons,
+    step: stepIcons,
+    audience: audienceIcons,
+    exampleMain: "images/icon-example-ca.png",
+    outcome: [
+      "images/icon-example-fast-ca.png",
+      "images/icon-example-consistent-ca.png",
+      "images/icon-example-time-ca.png",
+    ],
+  },
+  genxr: {
+    value: [
+      "images/icon-br-vr-genxr.png",
+      "images/icon-br-guided-genxr.png",
+      "images/icon-br-safe-genxr.png",
+    ],
+    capability: [
+      "images/icon-keycap-inmersive-genxr.png",
+      "images/icon-keycap-interactive-genxr.png",
+      "images/icon-keycap-perf-genxr.png",
+      "images/icon-keycap-steps-genxr.png",
+    ],
+    // No dedicated GEN XR step icons — reuse the line-art ones (tinted purple by CSS).
+    step: stepIcons,
+    audience: [
+      "images/icon-up-industrial-genxr.png",
+      "images/icon-up-plant-genxr.png",
+      "images/icon-up-educational-genxr.png"
+    ],
+    exampleMain: "images/icon-example-genxr.png",
+    outcome: [
+      "images/icon-example-fast-genxr.png",
+      "images/icon-example-measure-genxr.png",
+      "images/icon-example-safe-genxr.png",
+    ],
+  },
+  training: {
+    value: [
+      "images/icon-br-learn-train.png",
+      "images/icon-br-objective-train.png",
+      "images/icon-br-quali-train.png",
+    ],
+    capability: [
+      "images/icon-keycap-learn-train.png",
+      "images/icon-keycap-theory-train.png",
+      "images/icon-keycap-vr-train.png",
+      "images/icon-keycap-skills-train.png",
+    ],
+    step: [
+      "images/icon-step-path-train.png",
+      "images/icon-step-learn-train.png",
+      "images/icon-step-practice-train.png",
+      "images/icon-step-qualify-train.png",
+    ],
+    audience: [
+      "images/icon-up-workforce-train.png",
+      "images/icon-up-plant-train.png",
+      "images/icon-up-skills-train.png",
+    ],
+    exampleMain: "images/icon-example-train.png",
+    outcome: [
+      "images/icon-example-consis-train.png",
+      "images/icon-example-visible-train.png",
+      "images/icon-example-skills-train.png",
+    ],
+  },
+};
+
+function iconsFor(key) {
+  return iconSets[key] || iconSets.car;
+}
 let currentProjectKey = null;
 
 function openProject(key) {
@@ -403,6 +652,10 @@ function openProject(key) {
   currentProjectKey = key;
 
   brochure.classList.toggle("theme-purple", key === "genxr");
+  brochure.classList.toggle("theme-pink", key === "car");
+  brochure.classList.toggle("theme-green", key === "training");
+
+  const icons = iconsFor(key);
 
   document.getElementById("brochure-kicker").textContent = project.kicker;
   document.getElementById("brochure-title").textContent = project.title;
@@ -411,11 +664,41 @@ function openProject(key) {
   brochureImage.src = media.image;
   brochureImage.alt = media.imageAlt;
 
+  document
+    .querySelectorAll(".value-row .value-icon img")
+    .forEach((img, index) => {
+      if (icons.value[index]) img.src = icons.value[index];
+    });
+
+  const valueText = project.value || projects.car.value || [];
+  document
+    .querySelectorAll(".value-row .value-card")
+    .forEach((card, index) => {
+      const copy = valueText[index];
+      if (!copy) return;
+      const heading = card.querySelector("h4");
+      const paragraph = card.querySelector("p");
+      if (heading) heading.textContent = copy[0];
+      if (paragraph) paragraph.textContent = copy[1];
+    });
+
+  const exampleIcon = document.querySelector(".example-icon img");
+  if (exampleIcon) exampleIcon.src = icons.exampleMain;
+
+  const outcomeText = project.outcomes || projects.car.outcomes || [];
+  document.querySelectorAll(".outcome-tags span").forEach((span, index) => {
+    if (icons.outcome[index]) {
+      span.innerHTML = `<img src="${icons.outcome[index]}" alt=""> ${
+        outcomeText[index] || ""
+      }`;
+    }
+  });
+
   const builtFor = document.getElementById("built-for");
   builtFor.innerHTML = "";
   project.builtFor.slice(0, 3).forEach((item, index) => {
     const tag = document.createElement("span");
-    tag.innerHTML = `<img src="${audienceIcons[index]}" alt=""> ${item}`;
+    tag.innerHTML = `<img src="${icons.audience[index]}" alt=""> ${item}`;
     builtFor.appendChild(tag);
   });
 
@@ -425,11 +708,15 @@ function openProject(key) {
     const capability = document.createElement("div");
     capability.className = "capability-item";
     capability.innerHTML = `
-      <span aria-hidden="true"><img src="${capabilityIcons[index]}" alt=""></span>
+      <span aria-hidden="true"><img src="${icons.capability[index]}" alt=""></span>
       <p>${item}</p>
     `;
     capabilities.appendChild(capability);
   });
+
+  const flowTitle = document.getElementById("flow-title");
+  if (flowTitle)
+    flowTitle.textContent = project.flowTitle || "From documentation to answer";
 
   const steps = document.getElementById("how-steps");
   steps.innerHTML = "";
@@ -439,17 +726,26 @@ function openProject(key) {
     step.innerHTML = `
       <span class="visual-step-number">${index + 1}</span>
       <span class="visual-step-icon" aria-hidden="true"><img src="${
-        stepIcons[index]
+        icons.step[index]
       }" alt=""></span>
       <strong>${item[0]}</strong>
     `;
     steps.appendChild(step);
   });
 
+  const example = project.example;
+  const exampleLabels = example?.labels || ["Problem", "Response", "Outcome"];
+  document.querySelectorAll(".example-card dt").forEach((dt, index) => {
+    if (exampleLabels[index]) dt.textContent = exampleLabels[index];
+  });
+
   document.getElementById("example-problem").textContent =
-    key === "car" ? "The Check Engine Light is ON." : project.how[0][1];
-  document.getElementById("example-response").textContent = project.useCase;
+    example?.values?.[0] ??
+    (key === "car" ? "The Check Engine Light is ON." : project.how[0][1]);
+  document.getElementById("example-response").textContent =
+    example?.values?.[1] ?? project.useCase;
   document.getElementById("example-outcome").textContent =
+    example?.values?.[2] ??
     "The user reaches the recommended next action with clear, consistent guidance.";
 
   brochure.classList.add("open");

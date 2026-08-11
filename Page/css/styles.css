@@ -415,6 +415,11 @@ h2{
   --bosch-pink: #6a1b9a;
 }
 
+/* Training card uses the green accent */
+.project-card[data-project="training"] {
+  --bosch-pink: #00884a;
+}
+
 /* Imagen superior */
 .project-image-wrapper {
   width: 100%;
@@ -2491,9 +2496,12 @@ body.modal-open{overflow:hidden}
   box-shadow:0 10px 24px rgba(106,27,154,.2);
 }
 
-.brochure.theme-purple .pink-value .value-icon{
+.brochure.theme-purple .pink-value .value-icon,
+.brochure.theme-purple .blue-value .value-icon,
+.brochure.theme-purple .green-value .value-icon{
   background:#f3ecfa;
   border-color:#d9c2ef;
+  color:var(--bosch-purple);
 }
 
 .brochure.theme-purple .example-card{
@@ -2514,11 +2522,71 @@ body.modal-open{overflow:hidden}
   box-shadow:0 0 0 10px rgba(106,27,154,.18),0 0 38px rgba(106,27,154,.48);
 }
 
-/* Tint the pink line-art icons toward purple (excludes the hero photo) */
-.brochure.theme-purple .pink-value .value-icon img,
-.brochure.theme-purple .visual-step-icon img,
-.brochure.theme-purple .example-icon img,
-.brochure.theme-purple .audience-tags span img,
-.brochure.theme-purple .outcome-tags span img{
+/* GEN XR ships its own purple icons, so only the reused pink line-art
+   step icons need tinting toward purple (the hero photo is excluded). */
+.brochure.theme-purple .visual-step-icon img{
   filter:hue-rotate(-45deg) saturate(1.05);
+}
+
+/* =========================================
+   AI CAR ASSIST — ALL-PINK VALUE BOXES
+   Turns the blue and green value boxes (and
+   their icons) pink when the AI Car Assist
+   brochure is open.
+========================================= */
+
+.brochure.theme-pink .blue-value .value-icon,
+.brochure.theme-pink .green-value .value-icon{
+  background:#fff0f7;
+  border-color:#f3c8de;
+  color:var(--bosch-pink);
+}
+
+/* Recolor the blue and green line-art icons to Bosch pink */
+.brochure.theme-pink .blue-value .value-icon img,
+.brochure.theme-pink .green-value .value-icon img{
+  filter:brightness(0) saturate(100%) invert(13%) sepia(89%)
+         saturate(4374%) hue-rotate(310deg) brightness(94%) contrast(97%);
+}
+
+/* =========================================
+   TRAINING — GREEN THEME
+   Swaps every pink accent for green when the
+   brochure is opened for the Training project.
+========================================= */
+
+.brochure.theme-green{
+  --bosch-pink:#00884a;
+  --pink-soft:#e9f6ef;
+}
+
+.brochure.theme-green .primary-action{
+  background:linear-gradient(135deg,#0a7d43,#12a35c);
+  box-shadow:0 10px 24px rgba(0,136,74,.2);
+}
+
+.brochure.theme-green .pink-value .value-icon,
+.brochure.theme-green .blue-value .value-icon,
+.brochure.theme-green .green-value .value-icon{
+  background:#e9f6ef;
+  border-color:#bfe3ce;
+  color:var(--bosch-green);
+}
+
+.brochure.theme-green .example-card{
+  background:linear-gradient(135deg,#fff 20%,#eef8f1);
+  border-color:#cdeadb;
+}
+
+.brochure.theme-green .example-icon{
+  border-color:#bfe3ce;
+}
+
+.brochure.theme-green .outcome-tags span{
+  border-color:#cdeadb;
+}
+
+.brochure.theme-green .image-glow{
+  background:rgba(0,136,74,.88);
+  box-shadow:0 0 0 10px rgba(0,136,74,.18),0 0 38px rgba(0,136,74,.42);
 }
