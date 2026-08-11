@@ -330,41 +330,66 @@ const projects = {
   ===================================== */
 
   nfc: {
-    kicker: "Warehouse Intelligence",
+    kicker: "Connected Inventory & Operations",
 
     title: "Smart Warehouse Identification",
 
     summary:
-      "NFC-based identification system for warehouse stock tracking and operational guidance, providing users with easier access to inventory status, replenishment information, placement guidance and return-related insights.",
+      "Identify inventory instantly and turn connected stock data into guided warehouse decisions.",
+
+    value: [
+      [
+        "Identify instantly",
+        "Access item information with a simple NFC scan.",
+      ],
+      [
+        "See stock clearly",
+        "Retrieve location, quantity and availability in real time.",
+      ],
+      [
+        "Guide operations",
+        "Support picking, movement and replenishment decisions.",
+      ],
+    ],
+
+    flowTitle: "From scan to inventory action",
+
+    outcomes: ["Accurate stock", "Faster picking", "Traceable actions"],
+
+    example: {
+      labels: ["Situation", "Guidance", "Result"],
+      values: [
+        "A material box is found on the wrong warehouse shelf.",
+        "The scan reveals its correct location, quantity and required movement.",
+        "The operator relocates the item and the inventory record updates immediately.",
+      ],
+    },
 
     what: "Connects physical warehouse items or locations with digital information through NFC identification. Users can quickly identify stock, access relevant warehouse data and receive operational support for replenishment, placement and recurring inventory issues.",
 
     capabilities: [
-      "NFC-based item or location identification",
-      "Stock and warehouse tracking",
-      "Replenishment guidance",
-      "Placement recommendations",
-      "Return and issue visibility",
-      "Quick access to item information",
-      "Operational decision support",
+      "NFC identification",
+      "Stock & location lookup",
+      "Task guidance",
+      "Activity tracking",
     ],
 
     how: [
       [
-        "Identify with NFC",
-        "A warehouse item, bin or location is associated with an NFC tag.",
+        "Tap the item",
+        "The operator scans the NFC tag on a warehouse item, bin or location.",
       ],
       [
-        "Open the digital record",
-        "Scanning the tag gives the user immediate access to the related information.",
+        "Retrieve its record",
+        "Scanning the tag gives immediate access to the related inventory information.",
       ],
       [
-        "Analyze stock context",
-        "The platform shows stock levels, movement, returns and other useful warehouse data.",
+        "Confirm the action",
+        "The platform presents stock context and the recommended operational action.",
       ],
       [
-        "Guide the operation",
-        "The user receives recommendations on what to order, where to place it or what action to take.",
+        "Update inventory",
+        "The performed action is recorded and the inventory record updates immediately.",
       ],
     ],
 
@@ -372,11 +397,9 @@ const projects = {
       "A warehouse operator scans an NFC tag on a storage location. The platform shows current stock, identifies items with unusually high returns and recommends whether replenishment or rearrangement is needed.",
 
     builtFor: [
-      "Warehouses",
-      "Inventory Management",
-      "Logistics",
+      "Warehouse Operations",
+      "Inventory Control",
       "Material Flow",
-      "Stock Operations",
     ],
   },
 
@@ -636,6 +659,36 @@ const iconSets = {
       "images/icon-example-skills-train.png",
     ],
   },
+  nfc: {
+    value: [
+      "images/icon-br-identify-wh.png",
+      "images/icon-br-stock-wh.png",
+      "images/icon-br-guide-wh.png",
+    ],
+    capability: [
+      "images/icon-keycap-nfc-wh.png",
+      "images/icon-keycap-lookup-wh.png",
+      "images/icon-keycap-task-wh.png",
+      "images/icon-keycap-activity-wh.png",
+    ],
+    step: [
+      "images/icon-step-tap-wh.png",
+      "images/icon-step-record-wh.png",
+      "images/icon-step-confirm-wh.png",
+      "images/icon-step-update-wh.png",
+    ],
+    audience: [
+      "images/icon-up-operations-wh.png",
+      "images/icon-up-inventory-wh.png",
+      "images/icon-up-flow-wh.png",
+    ],
+    exampleMain: "images/icon-example-wh.png",
+    outcome: [
+      "images/icon-example-accurate-wh.png",
+      "images/icon-example-faster-wh.png",
+      "images/icon-example-trace-wh.png",
+    ],
+  },
 };
 
 function iconsFor(key) {
@@ -654,6 +707,7 @@ function openProject(key) {
   brochure.classList.toggle("theme-purple", key === "genxr");
   brochure.classList.toggle("theme-pink", key === "car");
   brochure.classList.toggle("theme-green", key === "training");
+  brochure.classList.toggle("theme-red", key === "nfc");
 
   const icons = iconsFor(key);
 
