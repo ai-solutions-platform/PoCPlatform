@@ -425,6 +425,11 @@ h2{
   --bosch-pink: #ea0016;
 }
 
+/* T-VAG / Charlie card uses the blue accent */
+.project-card[data-project="charlie"] {
+  --bosch-pink: #007bc0;
+}
+
 /* Imagen superior */
 .project-image-wrapper {
   width: 100%;
@@ -2642,4 +2647,46 @@ body.modal-open{overflow:hidden}
 .brochure.theme-red .image-glow{
   background:rgba(234,0,22,.88);
   box-shadow:0 0 0 10px rgba(234,0,22,.18),0 0 38px rgba(234,0,22,.45);
+}
+
+/* =========================================
+   T-VAG / CHARLIE — BLUE THEME
+   Swaps every pink accent for blue when the
+   brochure is opened for the Charlie project.
+========================================= */
+
+.brochure.theme-blue{
+  --bosch-pink:#007bc0;
+  --pink-soft:#e9f3fb;
+}
+
+.brochure.theme-blue .primary-action{
+  background:linear-gradient(135deg,#0a5fa4,#0f8ad6);
+  box-shadow:0 10px 24px rgba(0,123,192,.2);
+}
+
+.brochure.theme-blue .pink-value .value-icon,
+.brochure.theme-blue .blue-value .value-icon,
+.brochure.theme-blue .green-value .value-icon{
+  background:#e9f3fb;
+  border-color:#bcdcf2;
+  color:var(--bosch-blue);
+}
+
+.brochure.theme-blue .example-card{
+  background:linear-gradient(135deg,#fff 20%,#eef6fc);
+  border-color:#cfe6f6;
+}
+
+.brochure.theme-blue .example-icon{
+  border-color:#bcdcf2;
+}
+
+.brochure.theme-blue .outcome-tags span{
+  border-color:#cfe6f6;
+}
+
+.brochure.theme-blue .image-glow{
+  background:rgba(0,123,192,.88);
+  box-shadow:0 0 0 10px rgba(0,123,192,.18),0 0 38px rgba(0,123,192,.45);
 }

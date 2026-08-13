@@ -198,40 +198,66 @@ const projects = {
   ===================================== */
 
   charlie: {
-    kicker: "Troubleshooting Assistant",
+    kicker: "Voice-Guided Field Support",
 
     title: "T-VAG",
 
     summary:
-      "AI-powered virtual assistant for guided troubleshooting and maintenance support. It helps resolve issues step by step, capture evidence with images, use voice commands and generate reports automatically.",
+      "Guide technicians through troubleshooting with voice, evidence capture and automatic reporting.",
+
+    value: [
+      [
+        "Hands-free guidance",
+        "Interact by voice while keeping attention on the equipment.",
+      ],
+      [
+        "Capture evidence",
+        "Document readings, photos and observations during the workflow.",
+      ],
+      [
+        "Report automatically",
+        "Convert completed actions into a structured service report.",
+      ],
+    ],
+
+    flowTitle: "From issue to service report",
+
+    outcomes: ["Faster resolution", "Complete evidence", "Standardized reports"],
+
+    example: {
+      labels: ["Issue", "Guidance", "Result"],
+      values: [
+        "A technician investigates an intermittent pump failure.",
+        "Charlie suggests checks, records measurements and captures supporting evidence.",
+        "A complete service report is generated when the troubleshooting session ends.",
+      ],
+    },
 
     what: "Acts as a hands-free troubleshooting companion for technicians and operators. Charlie guides the user through a structured diagnostic process while capturing the evidence generated during the activity and creating a consistent service record.",
 
     capabilities: [
-      "Voice-driven interaction",
-      "Guided troubleshooting flows",
-      "Step-by-step maintenance support",
-      "Image evidence capture",
-      "Contextual instructions",
-      "Automatic report generation",
+      "Voice interaction",
+      "Guided workflows",
+      "Evidence capture",
+      "Report generation",
     ],
 
     how: [
       [
-        "Describe the issue",
-        "The user explains the problem using voice or text.",
+        "Start a session",
+        "The technician starts a voice session with Charlie at the equipment.",
       ],
       [
-        "Follow guided checks",
-        "Charlie presents the diagnostic or maintenance steps in sequence.",
+        "Follow guidance",
+        "Charlie presents the diagnostic checks step by step.",
       ],
       [
         "Capture evidence",
-        "Images and observations can be added during the troubleshooting process.",
+        "Readings, photos and observations are captured during the workflow.",
       ],
       [
-        "Generate the report",
-        "The session is summarized into a structured report with findings and actions.",
+        "Generate report",
+        "The session is compiled into a structured service report automatically.",
       ],
     ],
 
@@ -240,10 +266,8 @@ const projects = {
 
     builtFor: [
       "Field Service",
-      "Maintenance",
-      "Plant Operations",
-      "Technical Support",
-      "Service Documentation",
+      "Troubleshooting",
+      "Maintenance Teams",
     ],
   },
 
@@ -689,6 +713,36 @@ const iconSets = {
       "images/icon-example-trace-wh.png",
     ],
   },
+  charlie: {
+    value: [
+      "images/icon-br-voice-charlie.png",
+      "images/icon-example-evidence-charlie.png",
+      "images/icon-br-report-charlie.png",
+    ],
+    capability: [
+      "images/icon-br-voice-charlie.png",
+      "images/icon-step-guidance-charlie.png",
+      "images/icon-example-evidence-charlie.png",
+      "images/icon-keycap-report-charlie.png",
+    ],
+    step: [
+      "images/icon-br-voice-charlie.png",
+      "images/icon-step-guidance-charlie.png",
+      "images/icon-example-evidence-charlie.png",
+      "images/icon-step-report-charlie.png",
+    ],
+    audience: [
+      "images/icon-up-field-charlie.png",
+      "images/icon-up-troubleshooting-charlie.png",
+      "images/icon-up-teams-charlie.png",
+    ],
+    exampleMain: "images/icon-example-charlie.png",
+    outcome: [
+      "images/icon-example-faster-charlie.png",
+      "images/icon-example-evidence-charlie.png",
+      "images/icon-example-reports-charlie.png",
+    ],
+  },
 };
 
 function iconsFor(key) {
@@ -708,6 +762,7 @@ function openProject(key) {
   brochure.classList.toggle("theme-pink", key === "car");
   brochure.classList.toggle("theme-green", key === "training");
   brochure.classList.toggle("theme-red", key === "nfc");
+  brochure.classList.toggle("theme-blue", key === "charlie");
 
   const icons = iconsFor(key);
 
@@ -873,3 +928,28 @@ document.addEventListener("keydown", (event) => {
   if (videoModal.classList.contains("open")) closeVideo();
   else if (brochure.classList.contains("open")) closeProject();
 });
+
+/* ============================================
+   ENABLE / DISABLE SOLUTIONS
+   Reads solutions.config.json to decide which
+   gallery cards are shown. A key set to false
+   (or missing) hides that solution. If the file
+   can't be loaded, every card stays visible.
+============================================ */
+async function applySolutionsConfig() {
+  try {
+    const response = await fetch("solutions.config.json", { cache: "no-store" });
+    if (!response.ok) return;
+
+    const config = await response.json();
+
+    document.querySelectorAll(".project-card").forEach((card) => {
+      if (config[card.dataset.project] === false) card.remove();
+    });
+  } catch (error) {
+    // Config not available (e.g. opened via file://) — keep all cards visible.
+    console.warn("solutions.config.json not loaded; showing all solutions.", error);
+  }
+}
+
+applySolutionsConfig();

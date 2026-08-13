@@ -1,0 +1,10 @@
+{
+  "car": true,
+  "genxr": false,
+  "audio": false,
+  "charlie": false,
+  "training": true,
+  "nfc": true,
+  "bci": false,
+  "vci": false
+}
