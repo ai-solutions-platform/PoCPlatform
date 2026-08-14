@@ -400,6 +400,9 @@
               <button class="secondary-action" id="open-platform" type="button">
                 <span aria-hidden="true">↗</span> Open platform
               </button>
+              <button class="secondary-action" id="open-platform-2" type="button" hidden>
+                <span aria-hidden="true">↗</span> Practice platform
+              </button>
             </div>
 
             <div class="audience-tags" id="built-for"></div>
@@ -493,6 +496,33 @@
           <strong>Demo video ready to connect</strong>
           <p>Add the video URL in <code>js/script.js</code>.</p>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================
+       SOLUTIONS VISIBILITY SELECTOR
+  ======================================== -->
+  <div class="solutions-filter" id="solutions-filter">
+    <button
+      class="solutions-filter-toggle"
+      id="solutions-filter-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="solutions-filter-panel"
+    >
+      <span aria-hidden="true">⚙</span>
+      <span>Solutions</span>
+    </button>
+    <div class="solutions-filter-panel" id="solutions-filter-panel" hidden>
+      <div class="solutions-filter-head">
+        <strong>Visible solutions</strong>
+        <span>Changes apply instantly on this device</span>
+      </div>
+      <div class="solutions-filter-list" id="solutions-filter-list"></div>
+      <div class="solutions-filter-actions">
+        <button type="button" id="solutions-filter-all">Select all</button>
+        <button type="button" id="solutions-filter-reset">Reset</button>
       </div>
     </div>
   </div>

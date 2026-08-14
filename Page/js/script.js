@@ -557,13 +557,14 @@ const projectMedia = {
     image: "images/hero-training.png",
     imageAlt: "Training and Qualification Platform",
     demo: "",
-    platform: "",
+    platform: "https://bgsw-training.netlify.app/",
+    platform2: "https://bgsw-practice-training.netlify.app/",
   },
   nfc: {
     image: "images/poc-warehouse.png",
     imageAlt: "Smart Warehouse Identification",
     demo: "",
-    platform: "",
+    platform: "https://bgsw-warehouse.netlify.app/",
   },
   bci: {
     image: "images/hero-BCI.png",
@@ -583,6 +584,7 @@ const brochure = document.getElementById("brochure");
 const closeBtn = document.getElementById("close-brochure");
 const demoButton = document.getElementById("open-demo");
 const platformButton = document.getElementById("open-platform");
+const platform2Button = document.getElementById("open-platform-2");
 const brochureImage = document.getElementById("brochure-image");
 const videoModal = document.getElementById("video-modal");
 const closeVideoButton = document.getElementById("close-video");
@@ -773,6 +775,8 @@ function openProject(key) {
   brochureImage.src = media.image;
   brochureImage.alt = media.imageAlt;
 
+  platform2Button.hidden = !media.platform2;
+
   document
     .querySelectorAll(".value-row .value-icon img")
     .forEach((img, index) => {
@@ -915,6 +919,16 @@ platformButton.addEventListener("click", () => {
   }
 });
 
+platform2Button.addEventListener("click", () => {
+  const url = projectMedia[currentProjectKey]?.platform2;
+
+  if (url) {
+    window.open(url, "_blank", "noopener,noreferrer");
+  } else {
+    window.alert("The platform URL for this PoC has not been connected yet.");
+  }
+});
+
 brochure.addEventListener("click", (event) => {
   if (event.target === brochure) closeProject();
 });
@@ -931,25 +945,131 @@ document.addEventListener("keydown", (event) => {
 
 /* ============================================
    ENABLE / DISABLE SOLUTIONS
-   Reads solutions.config.json to decide which
-   gallery cards are shown. A key set to false
-   (or missing) hides that solution. If the file
-   can't be loaded, every card stays visible.
+   solutions.config.json provides the default
+   visibility. The on-screen dropdown lets you
+   override it instantly (stored per-device in
+   localStorage) without editing or committing
+   the config file. Cards are hidden, not removed,
+   so they can be toggled back on at any time.
 ============================================ */
+const SOLUTIONS_STORAGE_KEY = "bgsw-visible-solutions";
+let solutionDefaults = {};
+
+function readSolutionOverrides() {
+  try {
+    const raw = localStorage.getItem(SOLUTIONS_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+function writeSolutionOverrides(overrides) {
+  try {
+    localStorage.setItem(SOLUTIONS_STORAGE_KEY, JSON.stringify(overrides));
+  } catch {
+    /* Storage unavailable (private mode/file://) — session-only changes. */
+  }
+}
+
+function isSolutionVisible(key) {
+  const overrides = readSolutionOverrides();
+  if (key in overrides) return overrides[key] !== false;
+  return solutionDefaults[key] !== false;
+}
+
+function applySolutionVisibility() {
+  document.querySelectorAll(".project-card").forEach((card) => {
+    card.classList.toggle("is-hidden", !isSolutionVisible(card.dataset.project));
+  });
+}
+
+function buildSolutionsFilter() {
+  const list = document.getElementById("solutions-filter-list");
+  if (!list) return;
+  list.innerHTML = "";
+
+  document.querySelectorAll(".project-card").forEach((card) => {
+    const key = card.dataset.project;
+    const title = card.querySelector("h3")?.textContent.trim() || key;
+
+    const row = document.createElement("label");
+    row.className = "solutions-filter-item";
+    row.innerHTML = `
+      <input type="checkbox" data-project="${key}" ${
+      isSolutionVisible(key) ? "checked" : ""
+    }>
+      <span>${title}</span>
+    `;
+    list.appendChild(row);
+  });
+
+  list.querySelectorAll("input[type=checkbox]").forEach((input) => {
+    input.addEventListener("change", () => {
+      const overrides = readSolutionOverrides();
+      overrides[input.dataset.project] = input.checked;
+      writeSolutionOverrides(overrides);
+      applySolutionVisibility();
+    });
+  });
+}
+
+function setupSolutionsFilterControls() {
+  const filter = document.getElementById("solutions-filter");
+  const toggle = document.getElementById("solutions-filter-toggle");
+  const panel = document.getElementById("solutions-filter-panel");
+  if (!filter || !toggle || !panel) return;
+
+  toggle.addEventListener("click", () => {
+    const willOpen = panel.hidden;
+    panel.hidden = !willOpen;
+    toggle.setAttribute("aria-expanded", String(willOpen));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!panel.hidden && !filter.contains(event.target)) {
+      panel.hidden = true;
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document
+    .getElementById("solutions-filter-all")
+    ?.addEventListener("click", () => {
+      const overrides = readSolutionOverrides();
+      document.querySelectorAll(".project-card").forEach((card) => {
+        overrides[card.dataset.project] = true;
+      });
+      writeSolutionOverrides(overrides);
+      applySolutionVisibility();
+      buildSolutionsFilter();
+    });
+
+  document
+    .getElementById("solutions-filter-reset")
+    ?.addEventListener("click", () => {
+      try {
+        localStorage.removeItem(SOLUTIONS_STORAGE_KEY);
+      } catch {
+        /* ignore */
+      }
+      applySolutionVisibility();
+      buildSolutionsFilter();
+    });
+}
+
 async function applySolutionsConfig() {
   try {
     const response = await fetch("solutions.config.json", { cache: "no-store" });
-    if (!response.ok) return;
-
-    const config = await response.json();
-
-    document.querySelectorAll(".project-card").forEach((card) => {
-      if (config[card.dataset.project] === false) card.remove();
-    });
+    if (response.ok) solutionDefaults = await response.json();
   } catch (error) {
-    // Config not available (e.g. opened via file://) — keep all cards visible.
-    console.warn("solutions.config.json not loaded; showing all solutions.", error);
+    // Config not available (e.g. opened via file://) — keep defaults empty.
+    console.warn("solutions.config.json not loaded; using stored/all solutions.", error);
   }
+
+  applySolutionVisibility();
+  buildSolutionsFilter();
+  setupSolutionsFilterControls();
 }
 
 applySolutionsConfig();
