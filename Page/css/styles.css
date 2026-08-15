@@ -2715,7 +2715,7 @@ body.modal-open{overflow:hidden}
 
 .solutions-filter{
   position:fixed;
-  left:16px;
+  right:16px;
   bottom:16px;
   z-index:80;
   font-family:Arial, Helvetica, sans-serif;
@@ -2743,7 +2743,7 @@ body.modal-open{overflow:hidden}
 
 .solutions-filter-panel{
   position:absolute;
-  left:0;
+  right:0;
   bottom:calc(100% + 10px);
   width:260px;
   padding:14px;
@@ -2827,7 +2827,7 @@ body.modal-open{overflow:hidden}
 
 @media (max-width:720px){
   .solutions-filter{
-    left:12px;
+    right:12px;
     bottom:12px;
   }
 
