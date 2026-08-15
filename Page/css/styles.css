@@ -928,6 +928,11 @@ body.modal-open{overflow:hidden}
   background:#fff;
 }
 
+.primary-action[hidden],
+.secondary-action[hidden]{
+  display:none;
+}
+
 .primary-action:hover,
 .secondary-action:hover{
   transform:translateY(-2px);
