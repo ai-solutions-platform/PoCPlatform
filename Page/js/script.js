@@ -551,12 +551,13 @@ const projectMedia = {
     image: "images/poc-charlie.png",
     imageAlt: "TPA Charlie maintenance assistant",
     demo: "",
+    demoLink: "https://bosch.mediaspace.de.kaltura.com/media/Charlie%20/0_sfvgdkd8",
     platform: "",
   },
   training: {
     image: "images/hero-training.png",
     imageAlt: "Training and Qualification Platform",
-    demo: "",
+    demo: "videos/training-demo.mp4",
     platform: "https://bgsw-training.netlify.app/",
     platform2: "https://bgsw-practice-training.netlify.app/",
   },
@@ -775,6 +776,8 @@ function openProject(key) {
   brochureImage.src = media.image;
   brochureImage.alt = media.imageAlt;
 
+  demoButton.hidden = !media.demo && !media.demoLink;
+
   platform2Button.hidden = !media.platform2;
 
   document
@@ -875,6 +878,11 @@ function closeProject() {
 function openDemo() {
   const media = projectMedia[currentProjectKey];
   const project = projects[currentProjectKey];
+
+  if (media?.demoLink) {
+    window.open(media.demoLink, "_blank", "noopener,noreferrer");
+    return;
+  }
 
   videoTitle.textContent = project ? `${project.title} demo` : "Project demo";
   videoModal.classList.add("open");
